@@ -76,11 +76,11 @@ test.describe("products visibility tests", () => {
         const productButtons = page.locator(".btn_inventory");
         const productCount = await productButtons.count();
 
-        for (let i = 0; i < productCount+1; i++) {
+        for (let i = 0; i < productCount; i++) {
             const productButton = productButtons.nth(i);
             await expect(productButton).toBeVisible();
             await productButton.click();
-            console.log(`products ${i + 1}`);
+            console.log(`products ${i + 1} is visible`);
                        
         }
     })
